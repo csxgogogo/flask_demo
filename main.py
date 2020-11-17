@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/",methods=["GET"])
 def index():
-    return {"msg":"welcome chen page"}
+    return {"msg":"this is chen home"}
 
 
 if __name__ == "__main__":
