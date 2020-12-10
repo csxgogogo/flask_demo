@@ -10,9 +10,9 @@ def index():
     return {"msg": "welcome chen page"}
 
 
-http_server = pywsgi.WSGIServer(('localhost', 8888), app)
+http_server = pywsgi.WSGIServer(('0.0.0.0', 8888), app)
 
-app.debug = True
+app.debug = False
 if app.debug:
     from werkzeug.serving import run_with_reloader
 
@@ -23,5 +23,5 @@ if app.debug:
 else:
     http_server.serve_forever()
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=9999, debug=True)
+#if __name__ == "__main__":
+#    app.run(host="0.0.0.0", port=9999, debug=True)
